@@ -1,6 +1,6 @@
 ### BATTLE API
 
-Implémentation de l'IHM
+Implémentation de l'api de combat
 
 ### Lancer le projet
 
