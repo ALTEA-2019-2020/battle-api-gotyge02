@@ -3,7 +3,6 @@ package battle_api.converter;
 import battle_api.bo.BattlePokemon;
 import battle_api.bo.Pokemon;
 import battle_api.bo.PokemonType;
-import battle_api.service.PokemonTypeServiceImpl;
 import battle_api.utils.Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

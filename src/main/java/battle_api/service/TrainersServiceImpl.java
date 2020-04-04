@@ -5,6 +5,7 @@ import battle_api.bo.Trainer;
 import battle_api.dto.PokemonDto;
 import battle_api.dto.TrainerWithPokemonDto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -54,6 +55,7 @@ public class TrainersServiceImpl implements TrainersService {
     }
 
     @Autowired
+    @Qualifier("trainerApiRestTemplate")
     void setRestTemplate(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }

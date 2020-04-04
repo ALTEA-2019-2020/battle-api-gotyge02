@@ -6,5 +6,5 @@ public interface BattleService {
     String createBattle(String trainerName1, String trainerName2);
     List<Battle> getAllBattle();
     Battle getBattle(String uuid);
-    Battle attack(String uuid, String trainerName);
+    Battle attack(String uuid, String trainerName) throws Exception;
 }

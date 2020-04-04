@@ -19,7 +19,7 @@ public class BattleController {
         this.battleService = battleService;
     }
     @PostMapping()
-    public ResponseEntity<String> battles(@RequestBody Map<String, String> body) {
+    public ResponseEntity<String> createBattle(@RequestBody Map<String, String> body) {
         String trainerName = body.get("trainerName");
         String opponentName = body.get("opponentName");
         return ResponseEntity.ok().body(this.battleService.createBattle(trainerName, opponentName));
@@ -33,7 +33,7 @@ public class BattleController {
         return ResponseEntity.ok().body(this.battleService.getAllBattle());
     }
     @PostMapping(value = "/{uuid}/{trainerName}/attack")
-    public ResponseEntity<Battle> attack(@PathVariable(value = "uuid") String uuid, @PathVariable(value = "trainerName") String trainerName){
+    public ResponseEntity<Battle> attack(@PathVariable(value = "uuid") String uuid, @PathVariable(value = "trainerName") String trainerName) throws Exception {
         return ResponseEntity.ok().body(this.battleService.attack(uuid, trainerName));
     }
 }

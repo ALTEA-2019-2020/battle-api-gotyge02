@@ -54,15 +54,22 @@ public class BattleServiceImpl implements BattleService {
     }
 
     @Override
-    public Battle attack(String uuid, String trainerName) {
+    public Battle attack(String uuid, String trainerName) throws Exception {
         Battle battle = this.getBattle(uuid);
+        if(battle== null){
+            throw new Exception("Battle unknow.");
+        }
         int val = checkTrainerRound(battle,trainerName);
-        BattleTrainer battletrainer = this.checkIfTrainersHaveAPokemonAliveToFight(battle);
+        if(this.checkIfTrainersHaveAPokemonAliveToFight(battle) != null){
+            throw new Exception("No more pokemon.");
+        }
         if(val%2== 1){
             if(val == 1){doAttackRound(battle.getOpponent(), battle.getTrainer());}
             else if(val == 3){doAttackRound(battle.getTrainer(), battle.getOpponent());}
         }
-        checkIfTrainersHaveAPokemonAliveToFight(battle);
+        if(this.checkIfTrainersHaveAPokemonAliveToFight(battle) != null){
+            throw new Exception("No more pokemon.");
+        }
         return battle;
     }
 

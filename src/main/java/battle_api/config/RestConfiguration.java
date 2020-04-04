@@ -17,11 +17,6 @@ public class RestConfiguration {
     private String username;
     private String password;
 
-    @Bean
-    RestTemplate restTemplate(){
-        return new RestTemplate();
-    }
-
     @Autowired
     public void configureLocalInterceptor(RestTemplate restTemplate){
         restTemplate.setInterceptors(List.of((httpRequest, bytes, clientHttpRequestExecution) -> {
@@ -35,6 +30,11 @@ public class RestConfiguration {
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.setInterceptors(List.of(new BasicAuthenticationInterceptor(username, password)));
         return restTemplate;
+    }
+
+    @Bean
+    RestTemplate restTemplate(){
+        return new RestTemplate();
     }
 
     @Value("${trainer.service.user}")

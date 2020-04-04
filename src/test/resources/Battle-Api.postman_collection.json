@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "522dcc49-9c41-471b-93d6-49b1a9da8c94",
+		"name": "Battle-Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create battle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"trainerName\" : \"Ash\",\n\t\"opponentName\" : \"Misty\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9001/battles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"battles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all battle",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"trainerName\" : \"Ash\",\n\t\"opponentName\" : \"Misty\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9001/battles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"battles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get specific battle",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"trainerName\" : \"Ash\",\n\t\"opponentName\" : \"Misty\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9001/battles/d028c610-a823-4f9c-b796-07d64c41e0bc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"battles",
+						"d028c610-a823-4f9c-b796-07d64c41e0bc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attack",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"trainerName\" : \"Ash\",\n\t\"opponentName\" : \"Misty\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9001/battles/5039ffee-85c1-4ad5-9477-b5ee6c8a4833/Ash/attack",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"battles",
+						"5039ffee-85c1-4ad5-9477-b5ee6c8a4833",
+						"Ash",
+						"attack"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
