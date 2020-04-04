@@ -5,7 +5,8 @@ Implémentation de l'api de combat
 ## Lancer le projet
 
 Lancer le projet via un IDE comme IntelliJ.
-Penser à recopier dans application.properties le mot de passe généré pour la Trainer-Api.
+
+**Penser à recopier dans application.properties le mot de passe généré par la Trainer-Api.**
 
 Port utilisé : 9001
 
